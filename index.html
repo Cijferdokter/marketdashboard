@@ -7,9 +7,9 @@
 <title>Cijferdokter Markt Dashboard</title>
 <style>
 * { box-sizing: border-box; }
-body { font-family: Arial, -apple-system, sans-serif; margin: 0; padding: 0; background: #0F1419; color: #C5D0DD; line-height: 1.5; }
+body { font-family: Arial, -apple-system, sans-serif; margin: 0; padding: 0; background: #1A1F3A; color: #C5D0DD; line-height: 1.5; }
 .container { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
-.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #D31549; flex-wrap: wrap; gap: 12px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #C9A961; flex-wrap: wrap; gap: 12px; }
 .header-left { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
 .header-logo { height: 36px; width: auto; display: block; flex-shrink: 0; }
 .header-text-block { flex: 1; display: flex; justify-content: center; padding: 0 20px; }
@@ -17,44 +17,44 @@ body { font-family: Arial, -apple-system, sans-serif; margin: 0; padding: 0; bac
 .header-title { font-size: 18px; font-weight: 500; color: #92A8BD; margin: 0; }
 .header-slogan { font-size: 12px; color: #92A8BD; margin-top: 2px; font-style: italic; }
 .header-meta { text-align: right; font-size: 12px; color: #92A8BD; }
-.btn { font-size: 13px; padding: 6px 12px; border: 1px solid #2A3340; background: #1A1F26; border-radius: 6px; cursor: pointer; color: #C5D0DD; font-family: inherit; }
-.btn:hover { background: #D31549; color: white; border-color: #D31549; }
-.btn-primary { background: #D31549; color: white; border-color: #D31549; }
-.btn-primary:hover { background: #a01038; }
+.btn { font-size: 13px; padding: 6px 12px; border: 1px solid #39406B; background: #252B4A; border-radius: 6px; cursor: pointer; color: #C5D0DD; font-family: inherit; }
+.btn:hover { background: #C9A961; color: #1A1F3A; border-color: #C9A961; }
+.btn-primary { background: #C9A961; color: #1A1F3A; border-color: #C9A961; }
+.btn-primary:hover { background: #A8863F; color: #1A1F3A; }
 .tf-tabs { display: flex; gap: 6px; margin-bottom: 1rem; flex-wrap: wrap; }
-.tf-btn { font-size: 13px; padding: 8px 14px; border: 1px solid #2A3340; background: #1A1F26; border-radius: 6px; cursor: pointer; color: #C5D0DD; font-family: inherit; }
-.tf-btn:hover { background: #232932; }
-.tf-btn.active { background: #D31549; color: white; border-color: #D31549; }
-.fmt-btn { font-size: 12px; padding: 6px 12px; border: 1px solid #2A3340; background: #1A1F26; border-radius: 6px; cursor: pointer; color: #C5D0DD; font-family: inherit; }
-.fmt-btn:hover { background: #D31549; color: white; border-color: #D31549; }
-.export-modal { display: none; padding: 12px 14px; margin-bottom: 1rem; background: #1A1F26; border-radius: 8px; border: 1px solid #2A3340; }
+.tf-btn { font-size: 13px; padding: 8px 14px; border: 1px solid #39406B; background: #252B4A; border-radius: 6px; cursor: pointer; color: #C5D0DD; font-family: inherit; }
+.tf-btn:hover { background: #2E355A; }
+.tf-btn.active { background: #C9A961; color: #1A1F3A; border-color: #C9A961; }
+.fmt-btn { font-size: 12px; padding: 6px 12px; border: 1px solid #39406B; background: #252B4A; border-radius: 6px; cursor: pointer; color: #C5D0DD; font-family: inherit; }
+.fmt-btn:hover { background: #C9A961; color: #1A1F3A; border-color: #C9A961; }
+.export-modal { display: none; padding: 12px 14px; margin-bottom: 1rem; background: #252B4A; border-radius: 8px; border: 1px solid #39406B; }
 .export-modal.open { display: block; }
-.section-title { font-size: 15px; font-weight: 500; color: #E8EEF5; margin: 1.5rem 0 0.75rem; padding-left: 10px; border-left: 3px solid #D31549; }
+.section-title { font-size: 15px; font-weight: 500; color: #E8EEF5; margin: 1.5rem 0 0.75rem; padding-left: 26px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20126'%20fill='none'%20stroke='%23C9A961'%20stroke-width='9'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M8%205%20L62%205%20M8%205%20L48%2056%20M62%205%20Q90%208%2085%2030%20Q80%2049%2054%2056%20M5%2064%20L58%2064%20M5%2064%20L5%20120%20M45%2064%20Q63%2066%2092%20120'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: left center; background-size: auto 20px; min-height: 20px; display: flex; align-items: center; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-.ticker-card { background: #1A1F26; border: 1px solid #2A3340; border-radius: 10px; padding: 14px 16px; }
+.ticker-card { background: #252B4A; border: 1px solid #39406B; border-radius: 10px; padding: 14px 16px; }
 .ticker-card .name { font-size: 14px; color: #E8EEF5; font-weight: 500; margin-bottom: 2px; }
 .ticker-card .symbol { font-size: 11px; color: #92A8BD; margin-bottom: 10px; }
 .ticker-card .price { font-size: 22px; font-weight: 500; color: #E8EEF5; }
 .ticker-card .change { font-size: 13px; font-weight: 500; margin-top: 4px; }
 .up { color: #2DD4A0; }
-.down { color: #F8527A; }
+.down { color: #E06B7A; }
 .flat { color: #92A8BD; }
 .sparkline { margin-top: 10px; height: 120px; position: relative; }
-.mnav-panel { background: #1A1F26; border-left: 4px solid #D31549; border-radius: 8px; padding: 16px 18px; margin-top: 1.5rem; border: 1px solid #2A3340; }
-.mnav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #2A3340; }
+.mnav-panel { background: #252B4A; border-left: 4px solid #C9A961; border-radius: 8px; padding: 16px 18px; margin-top: 1.5rem; border: 1px solid #39406B; }
+.mnav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #39406B; }
 .mnav-grid .ml { font-size: 11px; color: #92A8BD; }
 .mnav-grid .mv { font-size: 14px; font-weight: 500; color: #E8EEF5; margin-top: 2px; }
-.footer-note { margin-top: 1.5rem; padding: 12px 14px; background: #1A1F26; border-radius: 8px; font-size: 12px; color: #92A8BD; line-height: 1.6; border: 1px solid #2A3340; }
-.diag-panel { margin-top: 1rem; padding: 12px 14px; background: #2A1418; border: 1px solid #D3154950; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 11px; max-height: 200px; overflow-y: auto; }
+.footer-note { margin-top: 1.5rem; padding: 12px 14px; background: #252B4A; border-radius: 8px; font-size: 12px; color: #92A8BD; line-height: 1.6; border: 1px solid #39406B; }
+.diag-panel { margin-top: 1rem; padding: 12px 14px; background: #241B2E; border: 1px solid #C9A96150; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 11px; max-height: 200px; overflow-y: auto; }
 .diag-panel.hidden { display: none; }
 .diag-line { padding: 2px 0; }
 .diag-ok { color: #2DD4A0; }
-.diag-err { color: #F8527A; }
+.diag-err { color: #E06B7A; }
 .diag-info { color: #C5D0DD; }
-.export-header { display: none; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid #D31549; }
+.export-header { display: none; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid #C9A961; }
 .export-mode .header, .export-mode .tf-tabs, .export-mode .export-modal, .export-mode .diag-panel { display: none !important; }
 .export-mode .export-header { display: block !important; }
-.export-mode { background: #0F1419; padding: 1.5rem; }
+.export-mode { background: #1A1F3A; padding: 1.5rem; }
 </style>
 </head>
 <body>
@@ -154,7 +154,7 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
 </div>
 
 <div class="diag-panel hidden" id="diag-panel">
-  <div style="font-weight: 500; margin-bottom: 6px; color: #D31549;">Diagnose log</div>
+  <div style="font-weight: 500; margin-bottom: 6px; color: #C9A961;">Diagnose log</div>
   <div id="diag-log"></div>
 </div>
 
@@ -463,7 +463,7 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
     const canvas = document.querySelector('[data-spark="' + id + '"]');
     if (!canvas || rows.length < 2) return;
     if (charts[id]) charts[id].destroy();
-    const color = ret > 0 ? '#2DD4A0' : ret < 0 ? '#F8527A' : '#92A8BD';
+    const color = ret > 0 ? '#2DD4A0' : ret < 0 ? '#E06B7A' : '#92A8BD';
 
     const values = rows.map(r => r.close);
     const minV = Math.min(...values);
@@ -552,7 +552,7 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
       mnavEl.style.color = '#2DD4A0';
       labelEl.textContent = 'premium van ' + ((mnav - 1) * 100).toFixed(1) + '% boven BTC NAV';
     } else {
-      mnavEl.style.color = '#F8527A';
+      mnavEl.style.color = '#E06B7A';
       labelEl.textContent = 'korting van ' + ((1 - mnav) * 100).toFixed(1) + '% onder BTC NAV';
     }
     document.getElementById('mnav-btc-hold').textContent = btcHoldings.toLocaleString('nl-NL', { maximumFractionDigits: 0 });
@@ -563,7 +563,7 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
     const plEl = document.getElementById('mnav-pl');
     if (plPct !== null) {
       plEl.textContent = fmtPct(plPct);
-      plEl.style.color = plPct >= 0 ? '#2DD4A0' : '#F8527A';
+      plEl.style.color = plPct >= 0 ? '#2DD4A0' : '#E06B7A';
     } else {
       plEl.textContent = 'n/a';
     }
@@ -629,7 +629,7 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
     target.classList.add('export-mode');
     await new Promise(r => setTimeout(r, 600));
     try {
-      const canvas = await html2canvas(target, { backgroundColor: '#0F1419', scale: 2, useCORS: true, logging: false });
+      const canvas = await html2canvas(target, { backgroundColor: '#1A1F3A', scale: 2, useCORS: true, logging: false });
       let finalCanvas = canvas;
       if (format === 'square' || format === 'portrait') {
         const targetW = format === 'square' ? 1200 : 1080;
@@ -639,7 +639,7 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
         finalCanvas.width = targetW * scale;
         finalCanvas.height = targetH * scale;
         const ctx = finalCanvas.getContext('2d');
-        ctx.fillStyle = '#0F1419';
+        ctx.fillStyle = '#1A1F3A';
         ctx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
         const sourceRatio = canvas.width / canvas.height;
         const targetRatio = targetW / targetH;
@@ -654,10 +654,10 @@ Koersen via Yahoo Finance (via corsproxy.io). BTC treasury data via CoinGecko ke
       link.href = finalCanvas.toDataURL('image/png');
       link.click();
       statusEl.textContent = 'Export gelukt';
-      statusEl.style.color = '#0F6E56';
+      statusEl.style.color = '#2DD4A0';
     } catch (e) {
       statusEl.textContent = 'Export mislukt: ' + e.message;
-      statusEl.style.color = '#D31549';
+      statusEl.style.color = '#C9A961';
     } finally {
       target.classList.remove('export-mode');
     }
